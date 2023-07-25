@@ -1,39 +1,17 @@
 # Transcendental Idealism of Planner: Evaluating Perception from the Planning Perspective for Autonomous Driving
 
-*International Conference on Machine Learning* ([ICML 2023](https://icml.cc/Conferences/2023))<br>
+International Conference on Machine Learning ([ICML 2023](https://icml.cc/Conferences/2023))<br>
 [Wei-Xin Li](http://www.svcl.ucsd.edu/~nicolas/), [Xiaodong Yang](https://xiaodongyang.org/) <br>
 [[Paper](https://arxiv.org/pdf/2306.07276.pdf)][[Poster](poster.pdf)]
 
-**Abstract:**
-*Evaluating the performance of perception modules in autonomous driving is
-one of the most critical tasks in developing the complex intelligent
-system. While module-level unit test methodologies adopted from
-traditional computer vision tasks are still feasible to a certain extent,
-it remains far less explored to evaluate the impact of perceptual noise on
-the driving performance of autonomous vehicles in a consistent and
-holistic manner.
-In this work, we propose a principled framework that
-provides a coherent and systematic understanding of how an error in the
-perception module affects the planning of an autonomous vehicle that
-actually controls the vehicle. Specifically, the planning process is
-formulated as expected utility maximisation, where all input signals from
-upstream modules jointly provide a world state description, and the
-planner strives for the optimal action to execute by maximising the
-expected utility determined by both world states and actions. We show
-that, under practical conditions, the objective function can be
-represented as an inner product between the world state description and
-the utility function in a Hilbert space. This geometric interpretation
-enables a novel way to analyse the impact of noise in world state
-estimation on planning and leads to a universal
-quantitative metric for the purposes. The whole framework resembles the
-idea of transcendental idealism in classical philosophical literature,
-which gives the name to our approach.*
+<p align="left"> 
+ <img src='imgs/teaser.png' height="410px"/> 
+</p>
 
-This repository contains an example implementeation for a neural planner to exemplify our work.
-
-**Note:**
+## Note
+- This repository contains an example implementeation for a neural planner to exemplify our work.
 - The dynamic range of the TIP score depends on that of the utility function. In this example implementation, the probability density map on a discrete grid is used in lieu of the utility function for the neural planner, thus the TIP score ranges between [-2, 0]. More context is available in the paper.
-- This repository is built on the [nuscenes-devkit library](https://github.com/nutonomy/nuscenes-devkit/blob/master/LICENSE.txt), and is adapted from the implementation of [Planner-KL Divergence (PKL)](https://github.com/nv-tlabs/planning-centric-metrics/blob/master/LICENSE), both of which use the Apache 2.0 License.
+- This example implementeation is built on the [nuscenes-devkit library](https://github.com/nutonomy/nuscenes-devkit/blob/master/LICENSE.txt), and is adapted from the implementation of [Planner-KL Divergence (PKL)](https://github.com/nv-tlabs/planning-centric-metrics/blob/master/LICENSE), both of which use the Apache 2.0 License.
 
 ### Citation
 If you found this codebase useful in your research or work, please consider citing
