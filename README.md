@@ -1,4 +1,4 @@
-# Transcendental Idealism of Planner: Evaluating Perception from the Planning Perspective for Autonomous Driving
+# Transcendental Idealism of Planner: Evaluating Perception from Planning Perspective for Autonomous Driving
 
 International Conference on Machine Learning ([ICML 2023](https://icml.cc/Conferences/2023))<br>
 [Wei-Xin Li](http://www.svcl.ucsd.edu/~nicolas/), [Xiaodong Yang](https://xiaodongyang.org/) <br>
@@ -12,19 +12,6 @@ International Conference on Machine Learning ([ICML 2023](https://icml.cc/Confer
 - This repository contains an example implementeation for a neural planner to exemplify our work.
 - The dynamic range of the TIP score depends on that of the utility function. In this example implementation, the probability density map on a discrete grid is used in lieu of the utility function for the neural planner, thus the TIP score ranges between [-2, 0]. More context is available in the paper.
 - This example implementeation is built on the [nuscenes-devkit library](https://github.com/nutonomy/nuscenes-devkit/blob/master/LICENSE.txt), and is adapted from the implementation of [Planner-KL Divergence (PKL)](https://github.com/nv-tlabs/planning-centric-metrics/blob/master/LICENSE), both of which use the Apache 2.0 License.
-
-### Citation
-If you found this codebase useful in your research or work, please consider citing
-```
-@InProceedings{Li_2023_ICML,
-author = {Li, Wei-Xin and Yang, Xiaodong},
-title = {Transcendental Idealism of Planner:
-Evaluating Perception from the Planning Perspective for Autonomous Driving},
-booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML)},
-month = {July},
-year = {2023}
-}
-```
 
 ## Preparation
 Download nuscenes data and maps from [https://www.nuscenes.org/](https://www.nuscenes.org/). We assume that [nuScenes](https://www.nuscenes.org/download) is located at `NUSCENES_ROOT` and nuScenes maps are located at `NUSCENES_MAP_ROOT`.
@@ -42,7 +29,7 @@ Install this `ti-planner` package.
 pip install -e .
 ```
 
-## Score A Submission With TIP
+## Score a submission with TIP
 Score a nuScenes detection submission on an eval set. Set `--gpuid=-1` to use the CPU.
 ```
 python main.py eval_test VERSION EVAL_SET --result_path=SUBMISSION --dataroot=NUSCENES_ROOT --map_folder=NUSCENES_MAP_ROOT --model_path=MODEL_PATH --mask_json=MASK_PATH --output_dir=OUTPUT_DIR
@@ -67,7 +54,7 @@ and statistics printout
 5 scenes with the lowest TIP scores under the trained planner are (the lower the TIP score is, the worse the error is)
 <img src="./imgs/tip_worst.gif">
 
-## TIP Score Distribution
+## TIP score distribution
 Given the TIP scores produced from [MEGVII val detections](https://github.com/poodarchu/Det3D/tree/master/examples/cbgs) by the scoring functionality above, one can visualise the distribution of TIP scores by
 ```
 python main.py eval_test trainval val --result_path=SCORE_JSON_PATH --nworkers=8 --dataroot=NUSCENES_ROOT --map_folder=NUSCENES_MAP_ROOT
@@ -77,7 +64,7 @@ python main.py score_distribution_plot trainval --score_result_path=SCORE_JSON_P
 ```
 <img src="./imgs/dist_tip.png">
 
-## Sensitivity to False Negatives and False Positives by TIP
+## Sensitivity to false negatives and false positives by TIP
 To understand the impact of false negatives, one can visualise the
 significance of each ground-truth object by removing it from the correponding scene and computing the TIP.
 ```
@@ -91,11 +78,18 @@ python main.py false_pos_viz trainval --model_path=MODELPATH --dataroot=NUSCENES
 ```
 <img src="./imgs/fpos_tip.gif">
 
-## Acknowledgements
-The work is supported by the perception, planning, infrastructure, and
-machine learning teams at [QCraft Inc.](https://www.qcraft.ai/en), with our
-special acknowledgements to
-Tiancheng Chen, Haijun Yang, Hao Lei, Renjie Li, Boqian Yu, Xiang Wang,
-and Chenxu Luo for informative discussion and timely assistance.
-We also thank all anonymous reviewers for their constructive feedbacks and
-valuable suggestions to improve the work.
+## Citation
+If you found this codebase useful in your research or work, please consider citing
+```
+@InProceedings{Li_2023_ICML,
+author = {Li, Wei-Xin and Yang, Xiaodong},
+title = {Transcendental Idealism of Planner:
+Evaluating Perception from the Planning Perspective for Autonomous Driving},
+booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML)},
+month = {July},
+year = {2023}
+}
+```
+
+## License
+Copyright (C) 2023 QCraft. All rights reserved. Licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) (Attribution-NonCommercial-ShareAlike 4.0 International). The code is released for academic research use only. For commercial use, please contact [business@qcraft.ai](business@qcraft.ai).
