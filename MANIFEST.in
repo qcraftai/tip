@@ -1,0 +1,1 @@
+global-exclude trans_idealism_planner/data.py trans_idealism_planner/explore.py trans_idealism_planner/tools.py **/__pycache__
