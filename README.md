@@ -4,9 +4,7 @@ International Conference on Machine Learning ([ICML 2023](https://icml.cc/Confer
 [Wei-Xin Li](http://www.svcl.ucsd.edu/~nicolas/), [Xiaodong Yang](https://xiaodongyang.org/) <br>
 [[Paper](https://arxiv.org/pdf/2306.07276.pdf)][[Poster](poster.pdf)]
 
-<p align="left"> 
- <img src='imgs/teaser.png' height="410px"/> 
-</p>
+<img src='imgs/teaser.png' height="410px"/> 
 
 ## Note
 - This repository contains an example implementeation for a neural planner to exemplify our work.
@@ -78,14 +76,17 @@ Similarly, one can visualise the importance of correctly not predicting a false 
 ```
 python main.py false_pos_viz trainval --model_path=MODELPATH --dataroot=NUSCENES_ROOT --map_folder=NUSCENES_MAP_ROOT
 ```
+<p align="center"> 
 <img src="./imgs/fpos_tip.gif">
+</p>
 
 ## Citation
 If you found this codebase useful in your research or work, please consider citing
 ```
 @InProceedings{Li_2023_ICML,
 author = {Li, Wei-Xin and Yang, Xiaodong},
-title = {Transcendental Idealism of Planner: Evaluating Perception from Planning Perspective for Autonomous Driving},
+title = {Transcendental Idealism of Planner:
+Evaluating Perception from Planning Perspective for Autonomous Driving},
 booktitle = {International Conference on Machine Learning (ICML)},
 year = {2023}
 }
