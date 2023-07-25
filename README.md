@@ -12,7 +12,7 @@ International Conference on Machine Learning ([ICML 2023](https://icml.cc/Confer
 - This example implementeation is built on the [nuscenes-devkit library](https://github.com/nutonomy/nuscenes-devkit/blob/master/LICENSE.txt), and is adapted from the implementation of [Planner-KL Divergence (PKL)](https://github.com/nv-tlabs/planning-centric-metrics/blob/master/LICENSE), both of which use the Apache 2.0 License.
 
 ## Preparation
-Download nuscenes data and maps from [https://www.nuscenes.org/](https://www.nuscenes.org/). We assume that [nuScenes](https://www.nuscenes.org/download) is located at `NUSCENES_ROOT` and nuScenes maps are located at `NUSCENES_MAP_ROOT`.
+Download nuScenes data and maps from [https://www.nuscenes.org/](https://www.nuscenes.org/). We assume that [nuScenes](https://www.nuscenes.org/download) is located at `NUSCENES_ROOT` and nuScenes maps are located at `NUSCENES_MAP_ROOT`.
 
 Install dependencies.
 
