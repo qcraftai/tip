@@ -55,7 +55,7 @@ and statistics printout
 <img src="./imgs/tip_worst.gif">
 
 ## TIP score distribution
-Given the TIP scores produced from [MEGVII val detections](https://github.com/poodarchu/Det3D/tree/master/examples/cbgs) by the scoring functionality above, one can visualise the distribution of TIP scores by
+Given the TIP scores produced from [CBGS](https://github.com/poodarchu/Det3D/tree/master/examples/cbgs) by the scoring functionality above, one can visualise the distribution of TIP scores by
 ```
 python main.py eval_test trainval val --result_path=SCORE_JSON_PATH --nworkers=8 --dataroot=NUSCENES_ROOT --map_folder=NUSCENES_MAP_ROOT
 ```
@@ -70,7 +70,9 @@ significance of each ground-truth object by removing it from the correponding sc
 ```
 python main.py false_neg_viz trainval --model_path=MODELPATH --dataroot=NUSCENES_ROOT --map_folder=NUSCENES_MAP_ROOT
 ```
+<p align="center"> 
 <img src="./imgs/fneg_tip.gif">
+</p>
 
 Similarly, one can visualise the importance of correctly not predicting a false positive at each location in a grid around the ego.
 ```
@@ -83,10 +85,8 @@ If you found this codebase useful in your research or work, please consider citi
 ```
 @InProceedings{Li_2023_ICML,
 author = {Li, Wei-Xin and Yang, Xiaodong},
-title = {Transcendental Idealism of Planner:
-Evaluating Perception from the Planning Perspective for Autonomous Driving},
-booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML)},
-month = {July},
+title = {Transcendental Idealism of Planner: Evaluating Perception from Planning Perspective for Autonomous Driving},
+booktitle = {International Conference on Machine Learning (ICML)},
 year = {2023}
 }
 ```
