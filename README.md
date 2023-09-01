@@ -6,8 +6,8 @@ The Fortieth International Conference on Machine Learning ([ICML 2023](https://i
 <img src='imgs/teaser.png' height="410px"/> 
 
 ## Note
-- This repository contains an example implementeation for a neural planner to exemplify our work.
-- The dynamic range of the TIP score depends on that of the utility function. In this example implementation, the probability density map on a discrete grid is used in lieu of the utility function for the neural planner, thus the TIP score ranges between [-2, 0]. More context is available in the paper.
+- This repository contains an example application of our work (which is originally designed for module-based planners) for a neural planner.
+- The dynamic range of the TIP score depends on that of the utility function. In this exemplar implementation, the probability density map on a discrete grid is used in lieu of the utility function for the neural planner, thus the TIP score ranges between [-2, 0]. More context is available in the paper.
 - This example implementeation is built on the [nuscenes-devkit library](https://github.com/nutonomy/nuscenes-devkit/blob/master/LICENSE.txt), and is adapted from the implementation of [Planner-KL Divergence (PKL)](https://github.com/nv-tlabs/planning-centric-metrics/blob/master/LICENSE), both of which use the Apache 2.0 License.
 
 ## Preparation
