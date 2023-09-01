@@ -305,7 +305,7 @@ def eval_test(
     """Evaluate detections with PKL / TIP."""
     nusc = NuScenes(
         version="v1.0-{}".format(version),
-        dataroot=os.path.join(dataroot, version),
+        dataroot=os.path.join(dataroot),
         verbose=True,
     )
     nusc_maps = get_nusc_maps(map_folder)
@@ -359,7 +359,7 @@ def score_distribution_plot(
 
     nusc = NuScenes(
         version="v1.0-{}".format(version),
-        dataroot=os.path.join(dataroot, version),
+        dataroot=os.path.join(dataroot),
         verbose=True,
     )
 
